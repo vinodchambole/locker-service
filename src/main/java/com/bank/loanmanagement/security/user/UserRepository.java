@@ -1,4 +1,4 @@
-package com.bank.usermanagement.security.user;
+package com.bank.loanmanagement.security.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

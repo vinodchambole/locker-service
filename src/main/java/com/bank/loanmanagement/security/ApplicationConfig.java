@@ -1,6 +1,6 @@
-package com.bank.usermanagement.security;
+package com.bank.loanmanagement.security;
 
-import com.bank.usermanagement.security.user.UserRepository;
+import com.bank.loanmanagement.security.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

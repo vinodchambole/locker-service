@@ -1,4 +1,4 @@
-package com.bank.usermanagement.security.token;
+package com.bank.loanmanagement.security.token;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

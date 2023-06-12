@@ -1,6 +1,6 @@
-package com.bank.usermanagement.security.token;
+package com.bank.loanmanagement.security.token;
 
-import com.bank.usermanagement.security.user.User;
+import com.bank.loanmanagement.security.user.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

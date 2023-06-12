@@ -1,6 +1,5 @@
-package com.bank.usermanagement.customer;
+package com.bank.loanmanagement.customer;
 
-import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
