@@ -1,4 +1,4 @@
-package com.bank.loanmanagement.security.user;
+package com.bank.locker.security.user;
 
 public enum Role {
   CUSTOMER,

@@ -1,24 +1,25 @@
-package com.bank.loanmanagement.security.user;
+package com.bank.locker.security.user;
 
-import com.bank.loanmanagement.security.token.Token;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.sql.Date;
 import java.util.Collection;
 import java.util.List;
 
-@Data
+@Getter
+@Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name = "user")
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class User implements UserDetails {
 
   @Id
@@ -31,20 +32,36 @@ public class User implements UserDetails {
   @Column(nullable = false)
   private String lastname;
 
-  @Column(unique = true)
+  @Column(nullable = false)
+  private Date dateOfBirth;
+
+  @Column(unique = true, nullable = false)
   private String email;
 
   @Column(nullable = false)
+  private String phoneNumber;
+
+  @Column(nullable = false)
+  private String address;
+
+  @Column(nullable = false)
   private String password;
+
+  @Column(unique = true)
+  private String aadharNumber;
+
+  @Column(unique = true, nullable = false)
+  private String panNumber;
+
+  @Column(nullable = false)
+  private String gender;
 
   @Enumerated(EnumType.STRING)
   @Column(nullable = false)
   private Role role;
 
-  @OneToMany(mappedBy = "user")
-  private List<Token> tokens;
-
   @Override
+  @JsonIgnore
   public Collection<? extends GrantedAuthority> getAuthorities() {
     return List.of(new SimpleGrantedAuthority(role.name()));
   }
