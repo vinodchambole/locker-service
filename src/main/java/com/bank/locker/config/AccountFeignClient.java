@@ -1,7 +1,6 @@
 package com.bank.locker.config;
 
 import com.bank.locker.repository.Account;
-import com.bank.locker.service.TransactionRequest;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,4 +1,4 @@
-package com.bank.locker.service;
+package com.bank.locker.config;
 
 import lombok.Builder;
 import lombok.Data;

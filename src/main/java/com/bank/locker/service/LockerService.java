@@ -1,6 +1,7 @@
 package com.bank.locker.service;
 
 import com.bank.locker.config.AccountFeignClient;
+import com.bank.locker.config.TransactionRequest;
 import com.bank.locker.controller.LockerReservationRequest;
 import com.bank.locker.exception.ResourceNotFoundException;
 import com.bank.locker.repository.Account;
